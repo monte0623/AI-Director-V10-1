@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="theme-color"
+        content="#111827">
+
+    <title>
+        AI Director V10.1
+    </title>
+
+    <link
+        rel="manifest"
+        href="manifest.json">
+
+    <link
+        rel="stylesheet"
+        href="css/main.css">
+
+    <link
+        rel="stylesheet"
+        href="css/layout.css">
+
+    <link
+        rel="stylesheet"
+        href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ========================================= -->
+    <!-- Header                                    -->
+    <!-- ========================================= -->
+
+    <header class="app-header">
+
+        <div class="app-title">
+
+            AI Director V10.1
+
+        </div>
+
+        <div class="app-actions">
+
+            <button
+                id="newProjectButton"
+                class="primary-button">
+
+                建立製作案
+
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- ========================================= -->
+    <!-- Main                                      -->
+    <!-- ========================================= -->
+
+    <main class="app-main">
+
+        <!-- ================= Dashboard ================= -->
+
+        <section
+            id="dashboardPage"
+            class="page dashboard">
+
+            <section class="dashboard-hero">
+
+                <h1>
+
+                    AI Director
+
+                </h1>
+
+                <p>
+
+                    Film Production Assistant
+
+                </p>
+
+            </section>
+
+            <section class="dashboard-toolbar">
+
+                <h2>
+
+                    製作案
+
+                </h2>
+
+                <button
+                    class="primary-button"
+                    id="toolbarCreateProjectButton">
+
+                    ＋ 建立製作案
+
+                </button>
+
+            </section>
+
+            <section
+                id="projectGrid"
+                class="project-grid">
+
+            </section>
+
+        </section>
+
+        <!-- ================= Workspace ================= -->
+
+        <section
+            id="workspacePage"
+            class="page hidden">
+
+            <div class="card">
+
+                <h2>
+
+                    Workspace
+
+                </h2>
+
+                <p>
+
+                    Build001-A Foundation
+
+                </p>
+
+                <p>
+
+                    Build002 開始加入 Script、Scene、Shot。
+
+                </p>
+
+                <button
+                    id="backDashboardButton"
+                    class="primary-button">
+
+                    返回 Dashboard
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/storage.js"></script>
+
+<script src="js/router.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+<script src="js/app.js"></script>
+
+<script>
+
+document
+.getElementById("newProjectButton")
+.addEventListener("click", () => {
+
+    Dashboard.createProject();
+
+});
+
+document
+.getElementById("toolbarCreateProjectButton")
+.addEventListener("click", () => {
+
+    Dashboard.createProject();
+
+});
+
+document
+.getElementById("backDashboardButton")
+.addEventListener("click", () => {
+
+    Router.navigate("dashboard");
+
+});
+
+</script>
+
+</body>
+
+</html>
