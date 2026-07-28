@@ -1,0 +1,252 @@
+/* ==========================================================
+   AI Director V10.1
+   Build001-A
+   css/layout.css
+   Layout System
+========================================================== */
+
+/* ---------- App ---------- */
+
+.app{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:var(--color-background);
+
+}
+
+/* ---------- Header ---------- */
+
+.app-header{
+
+    height:var(--header-height);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 20px;
+
+    background:var(--color-surface);
+
+    border-bottom:1px solid var(--color-border);
+
+    box-shadow:var(--shadow-small);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+
+}
+
+.app-title{
+
+    font-size:1.25rem;
+
+    font-weight:700;
+
+}
+
+.app-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+/* ---------- Main ---------- */
+
+.app-main{
+
+    flex:1;
+
+    width:100%;
+
+}
+
+.page{
+
+    width:min(100%,var(--max-width));
+
+    margin:0 auto;
+
+    padding:24px;
+
+}
+
+/* ---------- Section ---------- */
+
+.section{
+
+    margin-bottom:24px;
+
+}
+
+.section-title{
+
+    font-size:1.25rem;
+
+    font-weight:700;
+
+    margin-bottom:16px;
+
+}
+
+/* ---------- Card ---------- */
+
+.card{
+
+    background:var(--color-surface);
+
+    border:1px solid var(--color-border);
+
+    border-radius:var(--radius-medium);
+
+    box-shadow:var(--shadow-small);
+
+    padding:20px;
+
+}
+
+.card + .card{
+
+    margin-top:16px;
+
+}
+
+/* ---------- Flex ---------- */
+
+.flex{
+
+    display:flex;
+
+}
+
+.flex-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.align-center{
+
+    align-items:center;
+
+}
+
+.justify-between{
+
+    justify-content:space-between;
+
+}
+
+.gap-8{
+
+    gap:8px;
+
+}
+
+.gap-12{
+
+    gap:12px;
+
+}
+
+.gap-16{
+
+    gap:16px;
+
+}
+
+.gap-24{
+
+    gap:24px;
+
+}
+
+/* ---------- Grid ---------- */
+
+.grid{
+
+    display:grid;
+
+    gap:20px;
+
+}
+
+.grid-2{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.grid-3{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+.grid-4{
+
+    grid-template-columns:repeat(4,1fr);
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width:1024px){
+
+    .grid-4{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .page{
+
+        padding:16px;
+
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .app-header{
+
+        padding:0 16px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .app-title{
+
+        font-size:1rem;
+
+    }
+
+}
