@@ -1,3 +1,5 @@
+import Storage from "./storage.js";
+
 /* ==========================================================
    AI Director V10.1
    Build001-A
@@ -147,3 +149,6 @@ const Dashboard = (() => {
     };
 
 })();
+
+
+export default Dashboard;
