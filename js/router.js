@@ -35,6 +35,10 @@ const Router = (() => {
                 showDashboard();
                 break;
 
+            case "project":
+                showProject();
+                break;
+
             case "workspace":
                 showWorkspace();
                 break;
@@ -61,15 +65,22 @@ const Router = (() => {
 
         const dashboard = document.getElementById("dashboardPage");
         const workspace = document.getElementById("workspacePage");
+        const project=document.getElementById("projectPage");
 
         if (dashboard) {
             dashboard.classList.remove("hidden");
         }
 
-        if (workspace) {
-            workspace.classList.add("hidden");
-        }
+        if (workspace) workspace.classList.add("hidden");
+        if(project) project.classList.add("hidden");
 
+    }
+
+    
+    function showProject() {
+        currentPage="project";
+        ["dashboardPage","workspacePage"].forEach(id=>{const e=document.getElementById(id); if(e)e.classList.add("hidden");});
+        const p=document.getElementById("projectPage"); if(p)p.classList.remove("hidden");
     }
 
     function showWorkspace() {
@@ -78,6 +89,7 @@ const Router = (() => {
 
         const dashboard = document.getElementById("dashboardPage");
         const workspace = document.getElementById("workspacePage");
+        const project=document.getElementById("projectPage");
 
         if (dashboard) {
             dashboard.classList.add("hidden");
@@ -103,6 +115,7 @@ const Router = (() => {
 
         showDashboard,
 
+        showProject,
         showWorkspace,
 
         getCurrentPage

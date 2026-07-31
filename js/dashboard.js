@@ -80,7 +80,7 @@ const Dashboard = (() => {
 
                 Storage.setCurrentProject(project.id);
 
-                Router.navigate("workspace");
+                Router.navigate("project");
 
             });
 

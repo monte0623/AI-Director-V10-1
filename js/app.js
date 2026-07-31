@@ -31,3 +31,10 @@ function bindGlobalEvents() {
         back.addEventListener("click",()=>Router.navigate("dashboard"));
     }
 }
+
+document.addEventListener("click",(e)=>{
+ if(e.target.id==="openWorkspaceButton") Router.navigate("workspace");
+ if(e.target.id==="backProjectDashboardButton") Router.navigate("dashboard");
+ if(e.target.id==="openPlanningButton") alert("Planning 將於 Build003 開放");
+ if(e.target.id==="openAssetsButton") alert("Production Assets 將於 Build003 開放");
+});
