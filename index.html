@@ -161,41 +161,7 @@
 
 </div>
 
-<script src="js/storage.js"></script>
-
-<script src="js/router.js"></script>
-
-<script src="js/dashboard.js"></script>
-
-<script src="js/app.js"></script>
-
-<script>
-
-document
-.getElementById("newProjectButton")
-.addEventListener("click", () => {
-
-    Dashboard.createProject();
-
-});
-
-document
-.getElementById("toolbarCreateProjectButton")
-.addEventListener("click", () => {
-
-    Dashboard.createProject();
-
-});
-
-document
-.getElementById("backDashboardButton")
-.addEventListener("click", () => {
-
-    Router.navigate("dashboard");
-
-});
-
-</script>
+<script type="module" src="js/app.js"></script>
 
 </body>
 
