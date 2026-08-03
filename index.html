@@ -124,14 +124,29 @@
 
         <section id="projectPage" class="page hidden">
             <div class="card">
-                <h2 id="projectTitle">Project</h2>
-                <div class="project-hub-grid">
-                    <button id="openPlanningButton" class="primary-button">Planning</button>
-                    <button id="openAssetsButton" class="primary-button">Production Assets</button>
-                    <button id="openWorkspaceButton" class="primary-button">Workspace</button>
-                </div>
-                <button id="backProjectDashboardButton" class="primary-button">返回 Dashboard</button>
-            </div>
+<h2 id="projectTitle">Project Hub</h2>
+<p><strong>Project Overview</strong></p>
+<table style="width:100%;margin-bottom:16px">
+<tr><td>Project</td><td id="projectNameValue">Current Project</td></tr>
+<tr><td>Status</td><td>Active</td></tr>
+<tr><td>Planning</td><td>0%</td></tr>
+<tr><td>Assets</td><td>0%</td></tr>
+<tr><td>Workspace</td><td>Ready</td></tr>
+</table>
+<div class="project-hub-grid">
+<button id="openPlanningButton" class="primary-button">Planning</button>
+<button id="openAssetsButton" class="primary-button">Production Assets</button>
+<button id="openWorkspaceButton" class="primary-button">Workspace</button>
+</div>
+<hr>
+<h3>Quick Actions</h3>
+<div class="project-hub-grid">
+<button class="primary-button" id="quickScript">Script</button>
+<button class="primary-button" id="quickFigure">Figure</button>
+<button class="primary-button" id="quickLocation">Location</button>
+</div>
+<button id="backProjectDashboardButton" class="primary-button">返回 Dashboard</button>
+</div>
         </section>
 
         <!-- ================= Workspace ================= -->
